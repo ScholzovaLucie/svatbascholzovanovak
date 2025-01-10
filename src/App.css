@@ -1,0 +1,36 @@
+@import "@fontsource/playfair-display";
+@import "@fontsource/poppins";
+
+:root {
+  --chocolate-cosmos: #5f021fff;
+  --cinnabar: #e55c3bff;
+  --selective-yellow: #f9b109ff;
+  --buff: #ddb286ff;
+  --avocado: #63792aff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--buff); /* Jednotná barva pozadí */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%; /* Velikost loga */
+  color: var(--chocolate-cosmos);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif; /* Elegantní nadpisy */
+}
+
+button {
+  background-color: var(--selective-yellow);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--cinnabar);
+}

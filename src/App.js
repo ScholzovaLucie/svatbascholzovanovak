@@ -1,0 +1,99 @@
+import "./App.css"
+import React, { useRef } from "react";
+import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
+import AboutUs from "./components/AboutUs";
+import Location from "./components/Location";
+import Schedule from "./components/Schedule";
+import Dresscode from "./components/Dresscode";
+import ImportantPeople from "./components/ImportantPeople";
+import Gallery from "./components/Gallery";
+import ReservationForm from "./components/ReservationForm";
+import Footer from "./components/Footer";
+
+const App = () => {
+  const heroRef = useRef(null);
+  const aboutRef = useRef(null);
+  const locationRef = useRef(null);
+  const scheduleRef = useRef(null);
+  const dresscodeRef = useRef(null);
+  const importantPeopleRef = useRef(null);
+  const galleryRef = useRef(null);
+  const reservationRef = useRef(null);
+
+  const refs = {
+    hero: heroRef,
+    about: aboutRef,
+    location: locationRef,
+    schedule: scheduleRef,
+    dresscode: dresscodeRef,
+    importantPeople: importantPeopleRef,
+    gallery: galleryRef,
+    reservation: reservationRef,
+  };
+
+  const slowScrollTo = (ref) => {
+    const start = window.scrollY;
+    const end = ref.current.getBoundingClientRect().top + window.scrollY;
+    const duration = 1000;
+    const startTime = performance.now();
+
+    const scrollStep = (currentTime) => {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      const easeInOutCubic =
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      const scrollPosition = start + (end - start) * easeInOutCubic;
+
+      window.scrollTo(0, scrollPosition);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(scrollStep);
+      }
+    };
+
+    requestAnimationFrame(scrollStep);
+  };
+
+  const scrollToSection = (section) => {
+    if (refs[section]) {
+      slowScrollTo(refs[section]);
+    }
+  };
+
+  return (
+    <>
+      <Navigation scrollToSection={scrollToSection} />
+      <div ref={heroRef}>
+        <Hero scrollToReservation={() => scrollToSection("reservation")} />
+      </div>
+      <div ref={aboutRef}>
+        <AboutUs />
+      </div>
+      <div ref={locationRef}>
+        <Location />
+      </div>
+      <div ref={scheduleRef}>
+        <Schedule />
+      </div>
+      <div ref={dresscodeRef}>
+        <Dresscode />
+      </div>
+      <div ref={importantPeopleRef}>
+        <ImportantPeople />
+      </div>
+      <div ref={galleryRef}>
+        <Gallery />
+      </div>
+      <div ref={reservationRef}>
+        <ReservationForm />
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default App;
