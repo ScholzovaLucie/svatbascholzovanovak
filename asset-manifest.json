@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/svatba_2025/static/css/main.85a3489e.css",
-    "main.js": "/svatba_2025/static/js/main.194fdb49.js",
-    "static/media/logo.png": "/svatba_2025/static/media/logo.1ed27c5a3191110715ac.png",
-    "static/media/playfair-display-latin-400-normal.woff": "/svatba_2025/static/media/playfair-display-latin-400-normal.9c7c1543d792cb6bb2b2.woff",
-    "static/media/playfair-display-latin-400-normal.woff2": "/svatba_2025/static/media/playfair-display-latin-400-normal.01127cbe42de896f8511.woff2",
-    "static/media/playfair-display-latin-ext-400-normal.woff": "/svatba_2025/static/media/playfair-display-latin-ext-400-normal.9ea2943ecdca370550c2.woff",
-    "static/media/playfair-display-cyrillic-400-normal.woff": "/svatba_2025/static/media/playfair-display-cyrillic-400-normal.e8f79ad5a76821f7165f.woff",
-    "static/media/playfair-display-latin-ext-400-normal.woff2": "/svatba_2025/static/media/playfair-display-latin-ext-400-normal.ec5b9e3c4c997f6bac35.woff2",
-    "static/media/playfair-display-cyrillic-400-normal.woff2": "/svatba_2025/static/media/playfair-display-cyrillic-400-normal.3dc94a1021075fd54b85.woff2",
-    "static/media/poppins-latin-400-normal.woff": "/svatba_2025/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
-    "static/media/poppins-latin-400-normal.woff2": "/svatba_2025/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
-    "static/media/poppins-latin-ext-400-normal.woff": "/svatba_2025/static/media/poppins-latin-ext-400-normal.7e12786771ac4a8e6a5c.woff",
-    "static/media/playfair-display-vietnamese-400-normal.woff": "/svatba_2025/static/media/playfair-display-vietnamese-400-normal.40221529e528ff3e5a46.woff",
-    "static/media/poppins-latin-ext-400-normal.woff2": "/svatba_2025/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
-    "static/media/playfair-display-vietnamese-400-normal.woff2": "/svatba_2025/static/media/playfair-display-vietnamese-400-normal.5c877b3fa47066dbb461.woff2",
-    "index.html": "/svatba_2025/index.html",
-    "main.85a3489e.css.map": "/svatba_2025/static/css/main.85a3489e.css.map",
-    "main.194fdb49.js.map": "/svatba_2025/static/js/main.194fdb49.js.map"
+    "main.css": "/svatbascholzovanovak/static/css/main.581724b7.css",
+    "main.js": "/svatbascholzovanovak/static/js/main.194fdb49.js",
+    "static/media/logo.png": "/svatbascholzovanovak/static/media/logo.1ed27c5a3191110715ac.png",
+    "static/media/playfair-display-latin-400-normal.woff": "/svatbascholzovanovak/static/media/playfair-display-latin-400-normal.9c7c1543d792cb6bb2b2.woff",
+    "static/media/playfair-display-latin-400-normal.woff2": "/svatbascholzovanovak/static/media/playfair-display-latin-400-normal.01127cbe42de896f8511.woff2",
+    "static/media/playfair-display-latin-ext-400-normal.woff": "/svatbascholzovanovak/static/media/playfair-display-latin-ext-400-normal.9ea2943ecdca370550c2.woff",
+    "static/media/playfair-display-cyrillic-400-normal.woff": "/svatbascholzovanovak/static/media/playfair-display-cyrillic-400-normal.e8f79ad5a76821f7165f.woff",
+    "static/media/playfair-display-latin-ext-400-normal.woff2": "/svatbascholzovanovak/static/media/playfair-display-latin-ext-400-normal.ec5b9e3c4c997f6bac35.woff2",
+    "static/media/playfair-display-cyrillic-400-normal.woff2": "/svatbascholzovanovak/static/media/playfair-display-cyrillic-400-normal.3dc94a1021075fd54b85.woff2",
+    "static/media/poppins-latin-400-normal.woff": "/svatbascholzovanovak/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
+    "static/media/poppins-latin-400-normal.woff2": "/svatbascholzovanovak/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff": "/svatbascholzovanovak/static/media/poppins-latin-ext-400-normal.7e12786771ac4a8e6a5c.woff",
+    "static/media/playfair-display-vietnamese-400-normal.woff": "/svatbascholzovanovak/static/media/playfair-display-vietnamese-400-normal.40221529e528ff3e5a46.woff",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/svatbascholzovanovak/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
+    "static/media/playfair-display-vietnamese-400-normal.woff2": "/svatbascholzovanovak/static/media/playfair-display-vietnamese-400-normal.5c877b3fa47066dbb461.woff2",
+    "index.html": "/svatbascholzovanovak/index.html",
+    "main.581724b7.css.map": "/svatbascholzovanovak/static/css/main.581724b7.css.map",
+    "main.194fdb49.js.map": "/svatbascholzovanovak/static/js/main.194fdb49.js.map"
   },
   "entrypoints": [
-    "static/css/main.85a3489e.css",
+    "static/css/main.581724b7.css",
     "static/js/main.194fdb49.js"
   ]
 }
