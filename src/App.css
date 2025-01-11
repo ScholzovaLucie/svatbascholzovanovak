@@ -29,6 +29,12 @@ body {
   z-index: -1; /* Pozadí zůstane za obsahem */
 }
 
+@media (max-width: 768px) {
+  .background {
+    background-size: cover; /* Obrázek vyplní celé pozadí */
+  }
+}
+
 .content {
   position: relative; /* Zajišťuje, že obsah bude nad pozadím */
   z-index: 1;
