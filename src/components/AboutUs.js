@@ -104,7 +104,7 @@ const AboutUs = () => (
                 marginTop: "10px",
               }}
             >
-              Je člověk s velkým srdcem a vášní pro zemědělství. Pole a příroda jsou jeho druhým domovem, kde nachází klid a radost z dobře vykonané práce. Miluje zvířata, lyžování a cestování, které mu otevírají nové obzory. Své okolí okouzlí smíchem a optimismem – jeho extrovertní povaha přináší zábavu a energii všude, kam přijde.
+              Je člověk s velkým srdcem a vášní pro zemědělství. Pole a příroda jsou jeho druhým domovem, kde nachází klid a radost z dobře vykonané práce. Miluje zvířata a cestování, které mu otevírají nové obzory. Své okolí okouzlí smíchem a optimismem – jeho extrovertní povaha přináší zábavu a energii všude, kam přijde.
             </Typography>
           </CardContent>
         </Card>
