@@ -5,7 +5,7 @@ const ImportantPeople = () => {
   const brideSide = [
     { name: "Jiří Scholz", role: "Otec nevěsty" },
     { name: "Lenka Scholzová", role: "Matka nevěsty" },
-    { name: "Kristýna Suchánková Amrichový", role: "Svědkyně nevěsty" },
+    { name: "Kristýna Suchánková Amrichová", role: "Svědkyně nevěsty" },
   ];
 
   const groomSide = [
