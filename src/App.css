@@ -17,7 +17,7 @@ body {
   background-position: center;
   background-size: contain; /* Zajistí správnou velikost loga */
   background-attachment: fixed;
-  background-image: url('../public/img/logo.png'); /* Ujistěte se, že cesta k obrázku je správná */
+  background-image: url('/img/logo.png'); /* Ujistěte se, že cesta k obrázku je správná */
   transition: background-color 0.3s ease-in-out; /* Plynulý přechod barvy */
   color: var(--chocolate-cosmos);
 }
