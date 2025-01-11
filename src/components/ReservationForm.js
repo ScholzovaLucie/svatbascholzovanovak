@@ -73,7 +73,7 @@ const ReservationForm = () => {
           marginBottom: "20px",
         }}
       >
-        Rezervační formulář
+        Potvrzení účasti
       </Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>

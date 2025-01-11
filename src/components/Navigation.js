@@ -10,7 +10,7 @@ const Navigation = ({ scrollToSection }) => {
     { label: "Důležité osoby", section: "importantPeople" },
     { label: "Galerie", section: "gallery" },
     { label: "Seznam Hostů", section: "guestList" },
-    { label: "Rezervace", section: "reservation" },
+    { label: "Potvrzení účasti", section: "reservation" },
   ];
 
   return (
