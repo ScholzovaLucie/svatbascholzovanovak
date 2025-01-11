@@ -31,7 +31,7 @@ body {
 
 @media (max-width: 768px) {
   .background {
-    background-size: cover; /* Obrázek vyplní celé pozadí */
+    width: 110vw;
   }
 }
 
