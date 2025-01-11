@@ -74,7 +74,7 @@ const AboutUs = () => (
         >
           <CardMedia
             component="img"
-            image={`img/6.jpg`} // Nahraďte cestou k obrázku ženicha
+            image={`img/6.JPG`} // Nahraďte cestou k obrázku ženicha
             alt="Jára"
             sx={{
               height: "400px",
