@@ -26,6 +26,7 @@ const GuestList = () => {
   ];
 
   const celebrationGuests = [
+    "Martin Mazurek",
     "Miloš Hubka",
     "Zdeněk Taraba",
     "Klára Tarabová",
