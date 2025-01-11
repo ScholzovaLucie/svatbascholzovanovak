@@ -11,12 +11,62 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import { Box, Typography } from "@mui/material";
 import StyledCard from "./StyledCard";
+import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
+import CelebrationIcon from "@mui/icons-material/Celebration";
+import DanceIcon from "@mui/icons-material/SportsBar";
+import FlowerIcon from "@mui/icons-material/LocalFlorist";
+import PartyModeIcon from "@mui/icons-material/EmojiEmotions";
 
 const Schedule = () => {
   const events = [
-    { time: "14:00", title: "Obřad", description: "Začátek svatebního obřadu.", icon: <AccessTimeIcon /> },
-    { time: "15:00", title: "Focení", description: "Společné focení novomanželů a hostů.", icon: <CameraAltIcon /> },
-    { time: "16:00", title: "Hostina", description: "Začátek svatební hostiny.", icon: <RestaurantIcon /> },
+    {
+      time: "12:00",
+      title: "Sraz",
+      description: "Sraz na bezděkovském hřišti.",
+      icon: <AccessTimeIcon />,
+    },
+    {
+      time: "12:30",
+      title: "Odjezd",
+      description: "Hromadný odjezd na obřad.",
+      icon: <DirectionsBusIcon />,
+    },
+    {
+      time: "13:00",
+      title: "Obřad",
+      description: "Začátek svatebního obřadu.",
+      icon: <CelebrationIcon />,
+    },
+    {
+      time: "14:00",
+      title: "Focení",
+      description: "Společné focení novomanželů a hostů.",
+      icon: <CameraAltIcon />,
+    },
+    {
+      time: "15:00",
+      title: "Oběd",
+      description: "Rodinný oběd.",
+      icon: <RestaurantIcon />,
+    },
+    {
+      time: "16:00",
+      title: "První tanec",
+      description: "První tanec novomanželů.",
+      icon: <DanceIcon />,
+    },
+    {
+      time: "16:30",
+      title: "Kytka",
+      description: "Házení kytkou.",
+      icon: <FlowerIcon />,
+    },
+    {
+      time: "17:00",
+      title: "Zábava",
+      description: "Začátek volné zábavy.",
+      icon: <PartyModeIcon />,
+    },
   ];
 
   return (
