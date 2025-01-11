@@ -14,6 +14,7 @@ body {
   font-family: "'Playfair Display', serif";
   overflow: auto; /* Umožňuje scrollování obsahu */
   background-color: rgb(222, 179, 135);
+  overflow-x: hidden;
 }
 
 .background {
