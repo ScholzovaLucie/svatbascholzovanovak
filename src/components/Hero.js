@@ -44,10 +44,10 @@ const Hero = ({ scrollToReservation }) => {
         06. 09. 2025
       </Typography>
       <Typography
-        variant="h5"
-        color="gray"
+        variant="h4"
+        color="black"
         sx={{
-          fontFamily: "'Poppins', sans-serif",
+            fontFamily: "'Playfair Display', serif",
           marginTop: "10px",
         }}
       >
