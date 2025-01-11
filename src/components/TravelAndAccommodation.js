@@ -40,8 +40,8 @@ const TravelAndAccommodation = () => {
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
                 borderRadius: "12px",
                 border: "1px solid var(--cinnabar)",
-                backgroundColor: "rgba(255, 255, 255, 0.8)", // Jemná průhlednost
-                backdropFilter: "blur(5px)", // Sklovitý efekt
+                backgroundColor: "rgba(255, 255, 255, 0.5)", // Jemná průhlednost
+                backdropFilter: "blur(3px)", // Sklovitý efek
               }}
             >
               <CardContent>
