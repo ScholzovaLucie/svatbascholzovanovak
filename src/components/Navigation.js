@@ -10,6 +10,7 @@ const Navigation = ({ scrollToSection }) => {
     { label: "Dresscode", section: "dresscode" },
     { label: "Důležité osoby", section: "importantPeople" },
     { label: "Galerie", section: "gallery" },
+    { label: "Tipy na dary", section: "gifts" },
     { label: "Seznam Hostů", section: "guestList" },
     { label: "Potvrzení účasti", section: "reservation" },
   ];
@@ -20,43 +21,43 @@ const Navigation = ({ scrollToSection }) => {
       sx={{
         backgroundColor: "rgba(255, 255, 255, 0.5)",
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-        backdropFilter: "blur(3px)", // Moderní rozostření
-        padding: "2px 0",
+        backdropFilter: "blur(3px)",
+        padding: "5px 0",
         transition: "background-color 0.3s ease",
-        margin: "0",
-        justifyContent: "center",
-        alignItems: "center"
       }}
     >
       <Toolbar
         sx={{
           display: "flex",
-          flexWrap: "wrap",
+          flexWrap: "wrap", // Tlačítka se zalomí na další řádek
           justifyContent: "space-between",
           alignItems: "center",
-          margin: "0",
-          width: "95%",
+          maxWidth: "95vw", // Maximální šířka obsahu
+          margin: "0 auto",
+          width: "100%",
         }}
       >
         <Typography
           variant="h6"
-          onClick={() => scrollToSection("hero")} // Plynulé scrollování na vrchol stránky
+          onClick={() => scrollToSection("hero")}
           sx={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 700,
             color: "var(--chocolate-cosmos)",
-            cursor: "pointer", // Ikona kurzoru pro indikaci klikatelnosti
+            cursor: "pointer",
             "&:hover": {
-              color: "var(--cinnabar)", // Jemný efekt při hoveru
+              color: "var(--cinnabar)",
             },
           }}
         >
           Svatba Lucka&nbsp;&&nbsp;Jára
         </Typography>
-        {/* Skryj tlačítka na malých zařízeních */}
         <Box
           sx={{
-            display: { xs: "none", md: "flex" }, // Zobrazí tlačítka pouze na středních a větších zařízeních
+            display: { xs: "none", md: "flex" },
+            flexWrap: "wrap", // Zalomení tlačítek na menších obrazovkách
+            gap: "10px", // Větší mezery mezi tlačítky
+            justifyContent: "center",
           }}
         >
           {menuItems.map((item) => (
@@ -65,12 +66,12 @@ const Navigation = ({ scrollToSection }) => {
               onClick={() => scrollToSection(item.section)}
               sx={{
                 fontFamily: "'Poppins', sans-serif",
-                fontSize: "16px",
+                fontSize: "14px", // Zmenšené písmo
                 fontWeight: 500,
                 color: "var(--chocolate-cosmos)",
                 textTransform: "capitalize",
-                marginLeft: "15px",
                 position: "relative",
+                padding: "5px 10px", // Menší padding tlačítek
                 "&:after": {
                   content: '""',
                   position: "absolute",

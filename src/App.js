@@ -12,6 +12,7 @@ import ReservationForm from "./components/ReservationForm";
 import Footer from "./components/Footer";
 import GuestList from "./components/GuestList";
 import TravelAndAccommodation from "./components/TravelAndAccommodation";
+import GiftList from "./components/GiftList";
 
 const App = () => {
   const heroRef = useRef(null);
@@ -24,6 +25,7 @@ const App = () => {
   const reservationRef = useRef(null);
   const guestList = useRef(null);
   const travelRef = useRef(null);
+  const giftsRef = useRef(null);
   const [backgroundOpacity, setBackgroundOpacity] = useState(0); // Výchozí neprůhlednost
 
   useEffect(() => {
@@ -57,7 +59,8 @@ const App = () => {
     importantPeople: importantPeopleRef,
     gallery: galleryRef,
     reservation: reservationRef,
-    guestList: guestList
+    guestList: guestList,
+    gifts: giftsRef,
   };
 
   const slowScrollTo = (ref) => {
@@ -123,6 +126,9 @@ const App = () => {
       </div>
       <div ref={galleryRef}>
         <Gallery />
+      </div>
+      <div ref={giftsRef}>
+        <GiftList />
       </div>
       <div ref={guestList}>
         <GuestList />
