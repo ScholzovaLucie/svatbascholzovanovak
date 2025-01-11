@@ -29,11 +29,6 @@ body {
   z-index: -1; /* Pozadí zůstane za obsahem */
 }
 
-@media (max-width: 768px) {
-  .background {
-    width: 130vw;
-  }
-}
 
 .content {
   position: relative; /* Zajišťuje, že obsah bude nad pozadím */
