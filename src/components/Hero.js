@@ -25,7 +25,7 @@ const Hero = ({ scrollToReservation }) => {
   return (
     <Box
       sx={{
-        height: "90vh", // Zabírá celou výšku okna
+        height: "95vh", // Zabírá celou výšku okna
         display: "flex", // Centrování obsahu
         flexDirection: "column",
         justifyContent: "end",
