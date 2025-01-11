@@ -45,7 +45,7 @@ const Location = () => (
                 color: "var(--cinnabar)",
               }}
             >
-              U lípi
+              U lípy
               <br />
               50.515513, 16.266075
             </Typography>

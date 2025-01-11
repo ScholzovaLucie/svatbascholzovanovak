@@ -17,7 +17,6 @@ const Navigation = ({ scrollToSection }) => {
     <AppBar
       position="sticky"
       sx={{
-        display: { xs: "none", md: "block" },
         backgroundColor: "rgba(255, 255, 255, 0.5)",
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         backdropFilter: "blur(3px)", // Moderní rozostření
@@ -50,7 +49,12 @@ const Navigation = ({ scrollToSection }) => {
         >
           Svatba Lucka & Jára
         </Typography>
-        <Box>
+        {/* Skryj tlačítka na malých zařízeních */}
+        <Box
+          sx={{
+            display: { xs: "none", md: "flex" }, // Zobrazí tlačítka pouze na středních a větších zařízeních
+          }}
+        >
           {menuItems.map((item) => (
             <Button
               key={item.section}
