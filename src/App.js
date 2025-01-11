@@ -94,6 +94,7 @@ const App = () => {
       backgroundColor: `rgba(222, 179, 135, ${backgroundOpacity})`, // Dynamická průhlednost
       transition: "background-color 0.1s ease-in-out", 
     }}>
+      <div className="background"></div>
       <Navigation scrollToSection={scrollToSection} />
       <div ref={heroRef}>
         <Hero scrollToReservation={() => scrollToSection("reservation")} />
