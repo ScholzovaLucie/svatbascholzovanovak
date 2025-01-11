@@ -22,7 +22,7 @@ const App = () => {
   const galleryRef = useRef(null);
   const reservationRef = useRef(null);
   const guestList = useRef(null);
-  const [backgroundOpacity, setBackgroundOpacity] = useState(1); // Výchozí neprůhlednost
+  const [backgroundOpacity, setBackgroundOpacity] = useState(0); // Výchozí neprůhlednost
 
   useEffect(() => {
     const handleScroll = () => {

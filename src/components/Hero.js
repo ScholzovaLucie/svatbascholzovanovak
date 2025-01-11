@@ -23,16 +23,17 @@ const Hero = ({scrollToReservation}) => (
     </Typography>
     <Button
       variant="contained"
-      color="secondary"
       sx={{
         marginTop: "20px",
         padding: "10px 20px",
         fontFamily: "'Poppins', sans-serif",
         fontWeight: 600,
+        background: "rgba(255, 255, 255, 0.9)",
+        color: "var(--chocolate-cosmos)"
       }}
       onClick={scrollToReservation} // Při kliknutí volá scroll funkci
     >
-      Rezervovat místo
+      Potvrdit účast
     </Button>
   </Box>
 );

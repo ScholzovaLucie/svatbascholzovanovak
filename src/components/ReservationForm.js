@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Typography, TextField, Button, Grid } from "@mui/material";
+import emailjs from "emailjs-com";
 
 const ReservationForm = () => {
   const [form, setForm] = useState({
@@ -10,26 +11,56 @@ const ReservationForm = () => {
     message: "",
   });
 
+  const [sending, setSending] = useState(false); // Indikátor odesílání
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Děkujeme, ${form.name}, vaše rezervace byla odeslána!`);
+    setSending(true); // Nastav indikátor odesílání
+
+    const templateParams = {
+      name: form.name,
+      email: form.email,
+      adults: form.adults,
+      children: form.children,
+      message: form.message,
+    };
+
+    emailjs
+      .send(
+        "service_c0k0zfy", 
+        "template_5tuy8db",
+        templateParams,
+        "rs4VbdOfi0NbYm8Vu"
+      )
+      .then(
+        (response) => {
+          alert(`Děkujeme, ${form.name}, vaše rezervace byla odeslána!`);
+          setSending(false);
+          setForm({ name: "", email: "", adults: 0, children: 0, message: "" }); // Vyprázdnění formuláře
+        },
+        (error) => {
+          alert("Došlo k chybě při odesílání. Zkuste to prosím znovu.");
+          setSending(false);
+        }
+      );
   };
 
   return (
     <Box
       sx={{
         padding: "50px 20px",
-        border: "1px solid var(--cinnabar)", // Ohraničení pro zvýraznění
+        border: "1px solid var(--cinnabar)", // Ohraničení
         borderRadius: "12px",
         boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)", // Jemný stín
         maxWidth: "600px",
         margin: "auto",
         marginBottom: "35px",
-        backdropFilter: "blur(3px)", // Sklovitý efek
+        backgroundColor: "rgba(255, 255, 255, 0.5)", // Jemná průhlednost
+        backdropFilter: "blur(3px)", // Sklovitý efekt
       }}
     >
       <Typography
@@ -55,12 +86,6 @@ const ReservationForm = () => {
               onChange={handleChange}
               variant="outlined"
               required
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "&:hover fieldset": { borderColor: "var(--cinnabar)" },
-                  "&.Mui-focused fieldset": { borderColor: "var(--chocolate-cosmos)" },
-                },
-              }}
             />
           </Grid>
           <Grid item xs={12}>
@@ -73,12 +98,6 @@ const ReservationForm = () => {
               onChange={handleChange}
               variant="outlined"
               required
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "&:hover fieldset": { borderColor: "var(--cinnabar)" },
-                  "&.Mui-focused fieldset": { borderColor: "var(--chocolate-cosmos)" },
-                },
-              }}
             />
           </Grid>
           <Grid item xs={6}>
@@ -92,12 +111,6 @@ const ReservationForm = () => {
               variant="outlined"
               required
               inputProps={{ min: 0 }}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "&:hover fieldset": { borderColor: "var(--cinnabar)" },
-                  "&.Mui-focused fieldset": { borderColor: "var(--chocolate-cosmos)" },
-                },
-              }}
             />
           </Grid>
           <Grid item xs={6}>
@@ -110,12 +123,6 @@ const ReservationForm = () => {
               onChange={handleChange}
               variant="outlined"
               inputProps={{ min: 0 }}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "&:hover fieldset": { borderColor: "var(--cinnabar)" },
-                  "&.Mui-focused fieldset": { borderColor: "var(--chocolate-cosmos)" },
-                },
-              }}
             />
           </Grid>
           <Grid item xs={12}>
@@ -128,12 +135,6 @@ const ReservationForm = () => {
               variant="outlined"
               multiline
               rows={4}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "&:hover fieldset": { borderColor: "var(--cinnabar)" },
-                  "&.Mui-focused fieldset": { borderColor: "var(--chocolate-cosmos)" },
-                },
-              }}
             />
           </Grid>
           <Grid item xs={12}>
@@ -142,6 +143,7 @@ const ReservationForm = () => {
               type="submit"
               variant="contained"
               color="secondary"
+              disabled={sending} // Deaktivace tlačítka během odesílání
               sx={{
                 padding: "10px",
                 fontWeight: "bold",
@@ -150,7 +152,7 @@ const ReservationForm = () => {
                 "&:hover": { backgroundColor: "var(--chocolate-cosmos)" },
               }}
             >
-              Odeslat rezervaci
+              {sending ? "Odesílám..." : "Odeslat rezervaci"}
             </Button>
           </Grid>
         </Grid>

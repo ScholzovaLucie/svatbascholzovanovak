@@ -18,10 +18,10 @@ const Navigation = ({ scrollToSection }) => {
       position="sticky"
       sx={{
         display: { xs: "none", md: "block" },
-        background: "rgba(255, 255, 255, 0.9)", // Jemná průhlednost
+        backgroundColor: "rgba(255, 255, 255, 0.5)",
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-        backdropFilter: "blur(10px)", // Moderní rozostření
-        padding: "10px 0",
+        backdropFilter: "blur(3px)", // Moderní rozostření
+        padding: "2px 0",
         transition: "background-color 0.3s ease",
       }}
     >
