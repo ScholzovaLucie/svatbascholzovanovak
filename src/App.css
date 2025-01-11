@@ -11,22 +11,28 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: var(--chocolate-cosmos);
+  font-family: "'Playfair Display', serif";
+  overflow: auto; /* Umožňuje scrollování obsahu */
   background-color: rgb(222, 179, 135);
 }
 
 .background {
-  position: fixed;
+  position: fixed; /* Udržuje pozadí fixované */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('../public/img/logo.png');/* Ujistěte se, že cesta je správná */
+  background-image: url('../public/img/logo.png'); /* Správná cesta k obrázku */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  z-index: -1; /* Zajistí, že pozadí je za obsahem */
+  z-index: -1; /* Pozadí zůstane za obsahem */
+}
+
+.content {
+  position: relative; /* Zajišťuje, že obsah bude nad pozadím */
+  z-index: 1;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {

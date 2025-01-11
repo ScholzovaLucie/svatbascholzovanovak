@@ -95,6 +95,7 @@ const App = () => {
       transition: "background-color 0.1s ease-in-out", 
     }}>
       <div className="background"></div>
+      <div className="content">
       <Navigation scrollToSection={scrollToSection} />
       <div ref={heroRef}>
         <Hero scrollToReservation={() => scrollToSection("reservation")} />
@@ -124,6 +125,8 @@ const App = () => {
         <ReservationForm />
       </div>
       <Footer />
+      </div>
+      
     </div>
   );
 };
