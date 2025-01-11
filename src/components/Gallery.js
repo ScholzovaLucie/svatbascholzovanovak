@@ -6,12 +6,12 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    "/img/1.JPG",
-    "/img/2.JPG",
-    "/img/3.JPG",
-    "/img/4.JPG",
-    "/img/5.JPG",
-    "/img/6.JPG",
+    `img/1.jpg`,
+    `img/2.JPG`,
+    `img/3.JPG`,
+    `img/4.JPG`,
+    `img/5.JPG`,
+    `img/6.JPG`,
   ];
 
   const handleImageClick = (image) => {
