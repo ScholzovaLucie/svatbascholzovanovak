@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .background {
   position: fixed; /* Udržuje pozadí fixované */
   top: 0;
