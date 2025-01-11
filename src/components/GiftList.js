@@ -6,7 +6,7 @@ const GiftList = () => (
     sx={{
       padding: "50px 20px",
       textAlign: "center",
-      backgroundColor: "var(--buff)", // Světlé pozadí
+      backgroundColor: "transparent", // Světlé pozadí
     }}
   >
     <Typography
