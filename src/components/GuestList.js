@@ -14,7 +14,7 @@ const GuestList = () => {
     "Tereza Scholzová",
     "Tereza Weinlichová",
     "Lenka Scholzová",
-    "Jiří Scholzo",
+    "Jiří Scholz",
     "Jakub Scholz",
     "Anička Scholzová",
     "Vlasta Scholzová",
