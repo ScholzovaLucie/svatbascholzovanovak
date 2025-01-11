@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
+import StyledCard from "./StyledCard";
 
 const GuestList = () => {
   const ceremonyGuests = [
@@ -63,86 +64,44 @@ const GuestList = () => {
       <Grid container spacing={4} justifyContent="center">
         {/* Pozváni na obřad */}
         <Grid item xs={12} md={6}>
-          <Card
-            sx={{
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-              borderRadius: "12px",
-              border: "1px solid var(--cinnabar)",
-              backgroundColor: "rgba(255, 255, 255, 0.5)", // Jemná průhlednost
-              backdropFilter: "blur(3px)", // Sklovitý efekt
-              padding: "20px",
-            }}
-          >
-            <CardContent>
+          <StyledCard
+            key={"Pozváni na obřad"}
+            title={"Pozváni na obřad"}
+            details={<div>{ceremonyGuests.map((guest, index) => (
               <Typography
-                variant="h5"
+                key={index}
+                variant="body1"
                 align="center"
                 sx={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontWeight: 700,
+                  fontFamily: "'Poppins', sans-serif",
                   color: "var(--chocolate-cosmos)",
-                  marginBottom: "20px",
                 }}
               >
-                Pozváni na obřad
+                {guest}
               </Typography>
-              {ceremonyGuests.map((guest, index) => (
-                <Typography
-                  key={index}
-                  variant="body1"
-                  align="center"
-                  sx={{
-                    fontFamily: "'Poppins', sans-serif",
-                    color: "var(--chocolate-cosmos)",
-                  }}
-                >
-                  {guest}
-                </Typography>
-              ))}
-            </CardContent>
-          </Card>
+            ))}</div>}
+          />
         </Grid>
 
         {/* Pozváni na oslavu */}
         <Grid item xs={12} md={6}>
-          <Card
-            sx={{
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-              borderRadius: "12px",
-              border: "1px solid var(--cinnabar)",
-              backgroundColor: "rgba(255, 255, 255, 0.5)", // Jemná průhlednost
-              backdropFilter: "blur(3px)", // Sklovitý efek
-              padding: "20px",
-            }}
-          >
-            <CardContent>
+          <StyledCard
+            key={"Pozváni na oslavu"}
+            title={"Pozváni na oslavu"}
+            details={<div>{celebrationGuests.map((guest, index) => (
               <Typography
-                variant="h5"
+                key={index}
+                variant="body1"
                 align="center"
                 sx={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontWeight: 700,
+                  fontFamily: "'Poppins', sans-serif",
                   color: "var(--chocolate-cosmos)",
-                  marginBottom: "20px",
                 }}
               >
-                Pozváni na oslavu
+                {guest}
               </Typography>
-              {celebrationGuests.map((guest, index) => (
-                <Typography
-                  key={index}
-                  variant="body1"
-                  align="center"
-                  sx={{
-                    fontFamily: "'Poppins', sans-serif",
-                    color: "var(--chocolate-cosmos)",
-                  }}
-                >
-                  {guest}
-                </Typography>
-              ))}
-            </CardContent>
-          </Card>
+            ))}</div>}
+          />
         </Grid>
       </Grid>
     </Box>

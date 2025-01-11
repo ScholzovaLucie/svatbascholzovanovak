@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
+import StyledCard from "./StyledCard";
 
 const Location = () => (
   <Box sx={{ padding: "50px 20px", textAlign: "center" }}>
@@ -17,102 +18,64 @@ const Location = () => (
     <Grid container spacing={4} justifyContent="center">
       {/* Místo obřadu */}
       <Grid item xs={12} sm={6} md={4}>
-        <Card
-          sx={{
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            borderRadius: "12px",
-            border: "1px solid var(--cinnabar)",
-            backgroundColor: "rgba(255, 255, 255, 0.5)",
-            backdropFilter: "blur(3px)",
-          }}
-        >
-          <CardContent>
-            <Typography
-              variant="h6"
-              align="center"
-              sx={{
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 700,
-                color: "var(--chocolate-cosmos)",
-              }}
-            >
-              Místo obřadu
-            </Typography>
-            <Typography
-              variant="body2"
-              align="center"
-              sx={{
-                fontFamily: "'Poppins', sans-serif",
+        <StyledCard
+          key={"Místo obřadu"}
+          title={"Místo obřadu"}
+          details={<Typography
+            variant="body2"
+            align="center"
+            sx={{
+              fontFamily: "'Poppins', sans-serif",
+              color: "var(--cinnabar)",
+            }}
+          >
+            U lípy
+            <br />
+            <a
+              href="https://www.google.com/maps?q=50.515513,16.266075"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
                 color: "var(--cinnabar)",
+                textDecoration: "none",
+                fontWeight: "bold",
               }}
             >
-              U lípy
-              <br />
-              <a
-                href="https://www.google.com/maps?q=50.515513,16.266075"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: "var(--cinnabar)",
-                  textDecoration: "none",
-                  fontWeight: "bold",
-                }}
-              >
-                50.515513, 16.266075
-              </a>
-            </Typography>
-          </CardContent>
-        </Card>
+              50.515513, 16.266075
+            </a>
+          </Typography>}
+        />
       </Grid>
 
       {/* Místo oslavy */}
       <Grid item xs={12} sm={6} md={4}>
-        <Card
-          sx={{
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            borderRadius: "12px",
-            border: "1px solid var(--cinnabar)",
-            backgroundColor: "rgba(255, 255, 255, 0.5)",
-            backdropFilter: "blur(3px)",
-          }}
-        >
-          <CardContent>
-            <Typography
-              variant="h6"
-              align="center"
-              sx={{
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 700,
-                color: "var(--chocolate-cosmos)",
-              }}
-            >
-              Místo oslavy
-            </Typography>
-            <Typography
-              variant="body2"
-              align="center"
-              sx={{
-                fontFamily: "'Poppins', sans-serif",
+        <StyledCard
+          key={"Místo oslavy"}
+          title={"Místo oslavy"}
+          details={<Typography
+            variant="body2"
+            align="center"
+            sx={{
+              fontFamily: "'Poppins', sans-serif",
+              color: "var(--cinnabar)",
+            }}
+          >
+            Bezděkovské hřiště
+            <br />
+            <a
+              href="https://www.google.com/maps?q=50.507707,16.229028"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
                 color: "var(--cinnabar)",
+                textDecoration: "none",
+                fontWeight: "bold",
               }}
             >
-              Bezděkovské hřiště
-              <br />
-              <a
-                href="https://www.google.com/maps?q=50.507707,16.229028"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: "var(--cinnabar)",
-                  textDecoration: "none",
-                  fontWeight: "bold",
-                }}
-              >
-                50.507707, 16.229028
-              </a>
-            </Typography>
-          </CardContent>
-        </Card>
+              50.507707, 16.229028
+            </a>
+          </Typography>}
+        />
       </Grid>
     </Grid>
 

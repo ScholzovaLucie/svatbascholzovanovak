@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
+import StyledCard from "./StyledCard";
 
 const TravelAndAccommodation = () => {
   const info = [
@@ -35,40 +36,13 @@ const TravelAndAccommodation = () => {
       <Grid container spacing={4} justifyContent="center">
         {info.map((item, index) => (
           <Grid item xs={12} md={6} key={index}>
-            <Card
-              sx={{
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-                borderRadius: "12px",
-                border: "1px solid var(--cinnabar)",
-                backgroundColor: "rgba(255, 255, 255, 0.5)", // Jemná průhlednost
-                backdropFilter: "blur(3px)", // Sklovitý efek
-              }}
-            >
-              <CardContent>
-                <Typography
-                  variant="h6"
-                  align="center"
-                  sx={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontWeight: 700,
-                    color: "var(--chocolate-cosmos)",
-                    marginBottom: "10px",
-                  }}
-                >
-                  {item.title}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  align="center"
-                  sx={{
-                    fontFamily: "'Poppins', sans-serif",
-                    color: "var(--chocolate-cosmos)",
-                  }}
-                >
-                  {item.details}
-                </Typography>
-              </CardContent>
-            </Card>
+            <StyledCard
+              key={index}
+              title={item.title}
+              details={item.details}
+              image={item.image}
+              customStyles={item.customStyles}
+            />
           </Grid>
         ))}
       </Grid>

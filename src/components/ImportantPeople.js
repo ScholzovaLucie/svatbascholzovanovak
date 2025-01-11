@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
+import StyledCard from "./StyledCard";
 
 const ImportantPeople = () => {
   const brideSide = [
@@ -51,39 +52,11 @@ const ImportantPeople = () => {
       <Grid container spacing={4} justifyContent="center">
         {brideSide.map((person, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card
-              sx={{
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-                borderRadius: "12px",
-                border: "1px solid var(--cinnabar)",
-                backgroundColor: "rgba(255, 255, 255, 0.5)", // Jemná průhlednost
-                backdropFilter: "blur(3px)", // Sklovitý efek
-              }}
-            >
-              <CardContent>
-                <Typography
-                  variant="h6"
-                  align="center"
-                  sx={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontWeight: 700,
-                    color: "var(--chocolate-cosmos)",
-                  }}
-                >
-                  {person.name}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  align="center"
-                  sx={{
-                    fontFamily: "'Poppins', sans-serif",
-                    color: "var(--cinnabar)",
-                  }}
-                >
-                  {person.role}
-                </Typography>
-              </CardContent>
-            </Card>
+            <StyledCard
+              key={index}
+              title={person.name}
+              details={person.role}
+            />
           </Grid>
         ))}
       </Grid>
@@ -105,39 +78,11 @@ const ImportantPeople = () => {
       <Grid container spacing={4} justifyContent="center">
         {groomSide.map((person, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card
-              sx={{
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-                borderRadius: "12px",
-                border: "1px solid var(--cinnabar)",
-                backgroundColor: "rgba(255, 255, 255, 0.5)", // Jemná průhlednost
-                backdropFilter: "blur(3px)", // Sklovitý efek
-              }}
-            >
-              <CardContent>
-                <Typography
-                  variant="h6"
-                  align="center"
-                  sx={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontWeight: 700,
-                    color: "var(--chocolate-cosmos)",
-                  }}
-                >
-                  {person.name}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  align="center"
-                  sx={{
-                    fontFamily: "'Poppins', sans-serif",
-                    color: "var(--cinnabar)",
-                  }}
-                >
-                  {person.role}
-                </Typography>
-              </CardContent>
-            </Card>
+            <StyledCard
+              key={index}
+              title={person.name}
+              details={person.role}
+            />
           </Grid>
         ))}
       </Grid>

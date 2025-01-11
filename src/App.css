@@ -5,7 +5,7 @@
   --chocolate-cosmos: #5f021fff;
   --cinnabar: #e55c3bff;
   --selective-yellow: #f9b109ff;
-  --buff: rgba(222, 179, 135);
+  --buff: #deb38789;
   --avocado: #63792aff;
 }
 
@@ -13,7 +13,7 @@ body {
   margin: 0;
   font-family: "'Playfair Display', serif";
   overflow: auto; /* Umožňuje scrollování obsahu */
-  background-color: rgb(222, 179, 135);
+  background-color: var(--buff);
   overflow-x: hidden;
 }
 

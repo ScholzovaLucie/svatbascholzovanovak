@@ -96,7 +96,7 @@ const Gallery = () => {
             alt="Selected"
             style={{
               maxWidth: "90vw",
-              maxHeight: "90vh", 
+              maxHeight: "90vh",
               objectFit: "contain",
               borderRadius: "8px",
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",

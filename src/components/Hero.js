@@ -47,7 +47,7 @@ const Hero = ({ scrollToReservation }) => {
         variant="h4"
         color="black"
         sx={{
-            fontFamily: "'Playfair Display', serif",
+          fontFamily: "'Playfair Display', serif",
           marginTop: "10px",
         }}
       >

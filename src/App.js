@@ -37,11 +37,11 @@ const App = () => {
       let newOpacity = scrollPosition / windowHeight; 
 
       // Pokud uživatel scroluje dál, udělej pozadí méně průhledné
-      if (newOpacity > 0.45) {
-        newOpacity = Math.min(0.8, 0.45 + (scrollPosition - windowHeight) / windowHeight / 2);
+      if (newOpacity > 0.25) {
+        newOpacity = Math.min(0.8, 0.25 + (scrollPosition - windowHeight) / windowHeight / 2);
       }
 
-      setBackgroundOpacity(Math.min(newOpacity, 0.8)); // Maximum 0.8
+      setBackgroundOpacity(Math.min(newOpacity, 0.45)); // Maximum 0.8
     };
 
     window.addEventListener("scroll", handleScroll);
