@@ -56,7 +56,7 @@ const ReservationForm = () => {
         border: "1px solid var(--cinnabar)", // Ohraničení
         borderRadius: "12px",
         boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)", // Jemný stín
-        maxWidth: "600px",
+        maxWidth: "550px",
         margin: "auto",
         marginBottom: "35px",
         backgroundColor: "rgba(255, 255, 255, 0.5)", // Jemná průhlednost

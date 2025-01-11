@@ -23,16 +23,19 @@ const Navigation = ({ scrollToSection }) => {
         backdropFilter: "blur(3px)", // Moderní rozostření
         padding: "2px 0",
         transition: "background-color 0.3s ease",
+        margin: "0",
+        justifyContent: "center",
+        alignItems: "center"
       }}
     >
       <Toolbar
         sx={{
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "center",
-          maxWidth: "1200px",
-          margin: "0 auto",
-          width: "100%",
+          margin: "0",
+          width: "95%",
         }}
       >
         <Typography
@@ -48,7 +51,7 @@ const Navigation = ({ scrollToSection }) => {
             },
           }}
         >
-          Svatba Lucka & Jára
+          Svatba Lucka&nbsp;&&nbsp;Jára
         </Typography>
         {/* Skryj tlačítka na malých zařízeních */}
         <Box
