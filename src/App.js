@@ -1,5 +1,5 @@
 import "./App.css"
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
@@ -10,6 +10,7 @@ import ImportantPeople from "./components/ImportantPeople";
 import Gallery from "./components/Gallery";
 import ReservationForm from "./components/ReservationForm";
 import Footer from "./components/Footer";
+import GuestList from "./components/GuestList";
 
 const App = () => {
   const heroRef = useRef(null);
@@ -20,6 +21,29 @@ const App = () => {
   const importantPeopleRef = useRef(null);
   const galleryRef = useRef(null);
   const reservationRef = useRef(null);
+  const guestList = useRef(null);
+  const [backgroundOpacity, setBackgroundOpacity] = useState(1); // Výchozí neprůhlednost
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // Zvýšení opacity do určité hranice
+      let newOpacity = scrollPosition / windowHeight; 
+
+      // Pokud uživatel scroluje dál, udělej pozadí méně průhledné
+      if (newOpacity > 0.45) {
+        newOpacity = Math.min(0.8, 0.45 + (scrollPosition - windowHeight) / windowHeight / 2);
+      }
+
+      setBackgroundOpacity(Math.min(newOpacity, 0.8)); // Maximum 0.8
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   const refs = {
     hero: heroRef,
@@ -30,6 +54,7 @@ const App = () => {
     importantPeople: importantPeopleRef,
     gallery: galleryRef,
     reservation: reservationRef,
+    guestList: guestList
   };
 
   const slowScrollTo = (ref) => {
@@ -65,7 +90,10 @@ const App = () => {
   };
 
   return (
-    <>
+    <div style={{
+      backgroundColor: `rgba(222, 179, 135, ${backgroundOpacity})`, // Dynamická průhlednost
+      transition: "background-color 0.1s ease-in-out", 
+    }}>
       <Navigation scrollToSection={scrollToSection} />
       <div ref={heroRef}>
         <Hero scrollToReservation={() => scrollToSection("reservation")} />
@@ -88,11 +116,14 @@ const App = () => {
       <div ref={galleryRef}>
         <Gallery />
       </div>
+      <div ref={guestList}>
+        <GuestList />
+      </div>
       <div ref={reservationRef}>
         <ReservationForm />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

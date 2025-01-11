@@ -4,51 +4,19 @@ import { Box, Typography, Button } from "@mui/material";
 const Hero = ({scrollToReservation}) => (
   <Box
     sx={{
-      height: "100vh", // Zabírá celou výšku okna
+      height: "90vh", // Zabírá celou výšku okna
       display: "flex", // Centrování obsahu
       flexDirection: "column",
-      justifyContent: "center",
+      justifyContent: "end",
       alignItems: "center",
       textAlign: "center",
-      color: "white",
-      background: "linear-gradient(to bottom, var(--chocolate-cosmos), var(--buff))",
     }}
   >
     <Typography
       variant="h2"
-      gutterBottom
+      color="black"
       sx={{
         fontFamily: "'Playfair Display', serif",
-        fontWeight: 700,
-      }}
-    >
-      Lucie Scholzová 
-    </Typography>
-    <Typography
-      variant="h2"
-      gutterBottom
-      sx={{
-        fontFamily: "'Playfair Display', serif",
-        fontWeight: 700,
-      }}
-    >
-       & 
-    </Typography>
-    <Typography
-      variant="h2"
-      gutterBottom
-      sx={{
-        fontFamily: "'Playfair Display', serif",
-        fontWeight: 700,
-      }}
-    >
-       Jaroslav Novák
-    </Typography>
-    <Typography
-      variant="h5"
-      sx={{
-        fontFamily: "'Poppins', sans-serif",
-        fontWeight: 300,
       }}
     >
       06. 09. 2025
