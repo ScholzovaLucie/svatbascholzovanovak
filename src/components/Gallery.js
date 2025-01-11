@@ -7,11 +7,11 @@ const Gallery = () => {
 
   const images = [
     `img/1.jpg`,
-    `img/2.JPG`,
-    `img/3.JPG`,
-    `img/4.JPG`,
-    `img/5.JPG`,
-    `img/6.JPG`,
+    `img/2.jpg`,
+    `img/3.jpg`,
+    `img/4.jpg`,
+    `img/5.jpg`,
+    `img/6.jpg`,
   ];
 
   const handleImageClick = (image) => {
