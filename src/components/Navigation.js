@@ -6,6 +6,7 @@ const Navigation = ({ scrollToSection }) => {
     { label: "O nás", section: "about" },
     { label: "Místo", section: "location" },
     { label: "Harmonogram", section: "schedule" },
+    { label: "Doprava a ubytování", section: "travel" },
     { label: "Dresscode", section: "dresscode" },
     { label: "Důležité osoby", section: "importantPeople" },
     { label: "Galerie", section: "gallery" },

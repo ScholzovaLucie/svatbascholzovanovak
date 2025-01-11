@@ -11,6 +11,7 @@ import Gallery from "./components/Gallery";
 import ReservationForm from "./components/ReservationForm";
 import Footer from "./components/Footer";
 import GuestList from "./components/GuestList";
+import TravelAndAccommodation from "./components/TravelAndAccommodation";
 
 const App = () => {
   const heroRef = useRef(null);
@@ -22,6 +23,7 @@ const App = () => {
   const galleryRef = useRef(null);
   const reservationRef = useRef(null);
   const guestList = useRef(null);
+  const travelRef = useRef(null);
   const [backgroundOpacity, setBackgroundOpacity] = useState(0); // Výchozí neprůhlednost
 
   useEffect(() => {
@@ -50,6 +52,7 @@ const App = () => {
     about: aboutRef,
     location: locationRef,
     schedule: scheduleRef,
+    travel: travelRef,
     dresscode: dresscodeRef,
     importantPeople: importantPeopleRef,
     gallery: galleryRef,
@@ -108,6 +111,9 @@ const App = () => {
       </div>
       <div ref={scheduleRef}>
         <Schedule />
+      </div>
+      <div ref={travelRef}>
+        <TravelAndAccommodation />
       </div>
       <div ref={dresscodeRef}>
         <Dresscode />

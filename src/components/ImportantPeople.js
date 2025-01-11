@@ -3,8 +3,8 @@ import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
 
 const ImportantPeople = () => {
   const brideSide = [
-    { name: "Jiří Scholz", role: "Otec nevěsty" },
     { name: "Lenka Scholzová", role: "Matka nevěsty" },
+    { name: "Jiří Scholz", role: "Otec nevěsty" },
     { name: "Kristýna Suchánková Amrichová", role: "Svědkyně nevěsty" },
   ];
 
