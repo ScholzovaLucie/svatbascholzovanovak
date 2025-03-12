@@ -16,6 +16,7 @@ import CelebrationIcon from "@mui/icons-material/Celebration";
 import DanceIcon from "@mui/icons-material/SportsBar";
 import FlowerIcon from "@mui/icons-material/LocalFlorist";
 import PartyModeIcon from "@mui/icons-material/EmojiEmotions";
+import GroupIcon from "@mui/icons-material/Group";
 
 const Schedule = () => {
   const events = [
@@ -48,6 +49,12 @@ const Schedule = () => {
       title: "Oběd",
       description: "Rodinný oběd.",
       icon: <RestaurantIcon />,
+    },
+    {
+      time: "16:30",
+      title: "Hosté",
+      description: "Příjezd odpoledních hostů.",
+      icon: <GroupIcon />,
     },
     {
       time: "16:00",
@@ -85,44 +92,50 @@ const Schedule = () => {
       <StyledCard
         key={"Harmonogram dne"}
         title={""}
-        details={<Timeline position="alternate">
-          {events.map((event, index) => (
-            <TimelineItem key={index}>
-              <TimelineOppositeContent
-                sx={{ m: "auto 0" }}
-                align={index % 2 === 0 ? "right" : "left"}
-                variant="body2"
-                color="text.secondary"
-              >
-                {event.time}
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineConnector sx={{ bgcolor: "var(--chocolate-cosmos)" }} />
-                <TimelineDot
-                  sx={{
-                    bgcolor: "rgba(255, 255, 255, 0.5)", // Průhledné pozadí
-                    backdropFilter: "blur(5px)", // Sklovitý efekt
-                    border: "2px solid var(--cinnabar)", // Červený obrys
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+        details={
+          <Timeline position="alternate">
+            {events.map((event, index) => (
+              <TimelineItem key={index}>
+                <TimelineOppositeContent
+                  sx={{ m: "auto 0" }}
+                  align={index % 2 === 0 ? "right" : "left"}
+                  variant="body2"
+                  color="text.secondary"
                 >
-                  {React.cloneElement(event.icon, {
-                    sx: { color: "var(--cinnabar)" }, // Červená barva ikon
-                  })}
-                </TimelineDot>
-                <TimelineConnector sx={{ bgcolor: "var(--chocolate-cosmos)" }} />
-              </TimelineSeparator>
-              <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h6" component="span">
-                  {event.title}
-                </Typography>
-                <Typography>{event.description}</Typography>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>}
+                  {event.time}
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineConnector
+                    sx={{ bgcolor: "var(--chocolate-cosmos)" }}
+                  />
+                  <TimelineDot
+                    sx={{
+                      bgcolor: "rgba(255, 255, 255, 0.5)", // Průhledné pozadí
+                      backdropFilter: "blur(5px)", // Sklovitý efekt
+                      border: "2px solid var(--cinnabar)", // Červený obrys
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {React.cloneElement(event.icon, {
+                      sx: { color: "var(--cinnabar)" }, // Červená barva ikon
+                    })}
+                  </TimelineDot>
+                  <TimelineConnector
+                    sx={{ bgcolor: "var(--chocolate-cosmos)" }}
+                  />
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: "12px", px: 2 }}>
+                  <Typography variant="h6" component="span">
+                    {event.title}
+                  </Typography>
+                  <Typography>{event.description}</Typography>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        }
         customStyles={{ maxWidth: "600px", margin: "auto" }}
       />
     </Box>

@@ -1,4 +1,4 @@
-import "./App.css"
+import "./App.css";
 import React, { useRef, useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
@@ -26,28 +26,6 @@ const App = () => {
   const guestList = useRef(null);
   const travelRef = useRef(null);
   const giftsRef = useRef(null);
-  const [backgroundOpacity, setBackgroundOpacity] = useState(0); // Výchozí neprůhlednost
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-
-      // Zvýšení opacity do určité hranice
-      let newOpacity = scrollPosition / windowHeight; 
-
-      // Pokud uživatel scroluje dál, udělej pozadí méně průhledné
-      if (newOpacity > 0.25) {
-        newOpacity = Math.min(0.8, 0.25 + (scrollPosition - windowHeight) / windowHeight / 2);
-      }
-
-      setBackgroundOpacity(Math.min(newOpacity, 0.45)); // Maximum 0.8
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
 
   const refs = {
     hero: heroRef,
@@ -96,49 +74,45 @@ const App = () => {
   };
 
   return (
-    <div style={{
-      backgroundColor: `rgba(222, 179, 135, ${backgroundOpacity})`, // Dynamická průhlednost
-      transition: "background-color 0.1s ease-in-out", 
-    }}>
-      <div className="background" ></div>
+    <div>
+      <div className="background"></div>
       <div className="content">
-      <Navigation scrollToSection={scrollToSection} />
-      <div ref={heroRef}>
-        <Hero scrollToReservation={() => scrollToSection("reservation")} />
+        <Navigation scrollToSection={scrollToSection} />
+        <div ref={heroRef}>
+          <Hero scrollToReservation={() => scrollToSection("reservation")} />
+        </div>
+        <div ref={aboutRef}>
+          <AboutUs />
+        </div>
+        <div ref={locationRef}>
+          <Location />
+        </div>
+        <div ref={scheduleRef}>
+          <Schedule />
+        </div>
+        <div ref={travelRef}>
+          <TravelAndAccommodation />
+        </div>
+        <div ref={dresscodeRef}>
+          <Dresscode />
+        </div>
+        <div ref={importantPeopleRef}>
+          <ImportantPeople />
+        </div>
+        <div ref={galleryRef}>
+          <Gallery />
+        </div>
+        <div ref={giftsRef}>
+          <GiftList />
+        </div>
+        <div ref={guestList}>
+          <GuestList />
+        </div>
+        <div ref={reservationRef}>
+          <ReservationForm />
+        </div>
+        <Footer />
       </div>
-      <div ref={aboutRef}>
-        <AboutUs />
-      </div>
-      <div ref={locationRef}>
-        <Location />
-      </div>
-      <div ref={scheduleRef}>
-        <Schedule />
-      </div>
-      <div ref={travelRef}>
-        <TravelAndAccommodation />
-      </div>
-      <div ref={dresscodeRef}>
-        <Dresscode />
-      </div>
-      <div ref={importantPeopleRef}>
-        <ImportantPeople />
-      </div>
-      <div ref={galleryRef}>
-        <Gallery />
-      </div>
-      <div ref={giftsRef}>
-        <GiftList />
-      </div>
-      <div ref={guestList}>
-        <GuestList />
-      </div>
-      <div ref={reservationRef}>
-        <ReservationForm />
-      </div>
-      <Footer />
-      </div>
-      
     </div>
   );
 };

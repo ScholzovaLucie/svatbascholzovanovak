@@ -5,10 +5,10 @@ import StyledCard from "./StyledCard";
 const Dresscode = () => {
   const palette = [
     { name: "Vínová", color: "var(--chocolate-cosmos)" },
-    { name: "Cinnabar", color: "var(--cinnabar)" },
-    { name: "Selective Yellow", color: "var(--selective-yellow)" },
-    { name: "Buff", color: "#deb387" },
-    { name: "Avocado", color: "var(--avocado)" },
+    { name: "Rumělka (oranžová)", color: "var(--cinnabar)" },
+    { name: "Žlutá", color: "var(--selective-yellow)" },
+    { name: "Žluto-béžová (písková)", color: "var(--buff)" },
+    { name: "Avokádová zelená", color: "var(--avocado)" },
   ];
 
   return (

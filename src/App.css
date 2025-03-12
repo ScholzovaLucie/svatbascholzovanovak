@@ -5,7 +5,7 @@
   --chocolate-cosmos: #5f021fff;
   --cinnabar: #e55c3bff;
   --selective-yellow: #f9b109ff;
-  --buff: #deb38789;
+  --buff: #f0d4bc;
   --avocado: #63792aff;
 }
 
@@ -22,7 +22,7 @@ html {
 }
 
 .background {
-  position: fixed; /* Udržuje pozadí fixované */
+  position: absolute; /* Udržuje pozadí fixované */
   top: 0;
   left: 0;
   width: 100vw;
