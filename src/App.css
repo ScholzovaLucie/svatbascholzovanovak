@@ -25,12 +25,12 @@ html {
   position: absolute; /* Udržuje pozadí fixované */
   top: 0;
   left: 0;
-  width: auto;
+  width: 100vw;
   height: 100vh;
   background-image: url('../public/img/logo.png'); /* Správná cesta k obrázku */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 80%;
+  background-size: 40%;
   z-index: -1; /* Pozadí zůstane za obsahem */
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
   filter: brightness(0.8);
