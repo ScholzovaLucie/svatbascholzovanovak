@@ -25,7 +25,7 @@ html {
   position: absolute; /* Udržuje pozadí fixované */
   top: 0;
   left: 0;
-  width: 100vw;
+  width: auto;
   height: 100vh;
   background-image: url('../public/img/logo.png'); /* Správná cesta k obrázku */
   background-repeat: no-repeat;
