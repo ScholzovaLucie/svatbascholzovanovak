@@ -23,7 +23,7 @@ const Schedule = () => {
     {
       time: "12:00",
       title: "Sraz",
-      description: "Sraz na bezděkovském hřišti.",
+      description: "Sraz na adrese Machov 195, 549 63.",
       icon: <AccessTimeIcon />,
     },
     {
