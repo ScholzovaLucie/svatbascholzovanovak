@@ -47,6 +47,8 @@ const GuestList = () => {
     "David Fulka",
     "Jára Hubka",
     "Jirka Macura",
+    "Hela Martincová",
+    "Nela a Martina Peškovi"
   ];
 
   return (
