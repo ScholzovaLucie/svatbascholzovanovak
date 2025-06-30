@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { shadows } from "@mui/system";
 
 const Hero = ({ scrollToReservation }) => {
   const [daysLeft, setDaysLeft] = useState(0);
@@ -39,16 +40,19 @@ const Hero = ({ scrollToReservation }) => {
         color="black"
         sx={{
           fontFamily: "'Playfair Display', serif",
+          textShadow: "0px 0px 9px rgba(240, 212, 188)",
         }}
       >
         06. 09. 2025
       </Typography>
+
       <Typography
         variant="h4"
         color="black"
         sx={{
           fontFamily: "'Playfair Display', serif",
           marginTop: "10px",
+          textShadow: "0 2px 6px rgba(240, 212, 188, 0.6)",
         }}
       >
         Zbývá {daysLeft} dní

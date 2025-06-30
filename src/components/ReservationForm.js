@@ -75,6 +75,18 @@ const ReservationForm = () => {
       >
         Potvrzení účasti
       </Typography>
+      <Typography
+        variant="h6"
+        gutterBottom
+        align="center"
+        sx={{
+          fontFamily: "'Playfair Display', serif",
+          color: "var(--chocolate-cosmos)",
+          marginBottom: "20px",
+        }}
+      >
+        (Prosíme o závazné potvrzení účasti)
+      </Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
