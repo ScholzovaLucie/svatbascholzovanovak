@@ -36,6 +36,13 @@ html {
   filter: brightness(0.8);
 }
 
+@media (max-width: 768px) {
+  .background {
+    background-size: 100%; /* Zvýší velikost obrázku na menších obrazovkách */
+    top: -20px; /* Můžeš upravit podle vzhledu */
+  }
+}
+
 
 
 .content {

@@ -57,19 +57,19 @@ const Schedule = () => {
       icon: <GroupIcon />,
     },
     {
-      time: "16:00",
+      time: "17:00",
       title: "První tanec",
       description: "První tanec novomanželů.",
       icon: <DanceIcon />,
     },
     {
-      time: "16:30",
+      time: "17:30",
       title: "Kytka",
       description: "Házení kytkou.",
       icon: <FlowerIcon />,
     },
     {
-      time: "17:00",
+      time: "18:00",
       title: "Zábava",
       description: "Začátek volné zábavy.",
       icon: <PartyModeIcon />,
