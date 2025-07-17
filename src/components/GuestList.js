@@ -17,7 +17,7 @@ const GuestList = () => {
     "Anička Scholzová",
     "Vlasta Scholzová",
     "Jitka Doležalová, Láďa Doležal",
-    "Jitka Hornichová",
+    "Jitka Hornychová",
     "Ivana Petrovická, Jan Fišera",
     "Tereza Mádrová",
     "Eva Jirásková, Jan Amrich",
@@ -34,9 +34,9 @@ const GuestList = () => {
     "Kamil Novák",
     "Josef Novák",
     "Jakub Novák",
-    "Michal Krtička, Šárks Hubková",
-    "Ruda Blecha, Kačena Máslová",
-    "Rosťislav Mitiska",
+    "Michal Krtička, Šárka Hubková",
+    "Ruda Blecha, Kateřina Máslová",
+    "Rostislav Mitiska",
     "Adam Ševc",
     "Martina Jirásková, Martin Šedek",
     "Natálie Martincová, Filip Wietek",
@@ -82,7 +82,7 @@ const GuestList = () => {
           marginBottom: "20px",
         }}
       >
-        Drahé polovičky a děti výtání
+        Drahé polovičky a děti vítány
       </Typography>
       <Grid container spacing={4} justifyContent="center">
         {/* Pozváni na obřad */}

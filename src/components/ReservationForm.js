@@ -31,7 +31,7 @@ const ReservationForm = () => {
 
     emailjs
       .send(
-        "service_c0k0zfy",
+        "service_bv1c3k9",
         "template_5tuy8db",
         templateParams,
         "rs4VbdOfi0NbYm8Vu"
