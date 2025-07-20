@@ -18,7 +18,7 @@ const GuestList = () => {
     "Vlasta Scholzová",
     "Ladislav a Jitka Doležalovi",
     "Jitka Hornychová",
-    "Ivana Petrovická, Jan Fišera",
+    "Ivana Petrovická, a Jan Fišera",
     "Pavel a Tereza Mádrovi",
     "Eva Jirásková a Jan Amrich",
   ];
@@ -46,7 +46,7 @@ const GuestList = () => {
     "Lukáš Bajer",
     "David Fulka",
     "Jaroslav Hubka",
-    "Jiří a Alena Macurova",
+    "Jiří a Alena Macurovi",
     "Josef a Helena Martincovi",
     "Nela a Martina Peškovi",
     "Josef Verner",

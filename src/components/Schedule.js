@@ -89,6 +89,17 @@ const Schedule = () => {
       >
         Harmonogram dne
       </Typography>
+      <Typography
+        variant="h6"
+        gutterBottom
+        sx={{
+          fontFamily: "'Playfair Display', serif",
+          color: "var(--chocolate-cosmos)",
+          marginBottom: "20px",
+        }}
+      >
+        Časy jsou pouze orientační
+      </Typography>
       <StyledCard
         key={"Harmonogram dne"}
         title={""}
