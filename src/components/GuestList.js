@@ -25,8 +25,8 @@ const GuestList = () => {
   ];
 
   const celebrationGuests = [
-    "Miloš ml a Michaela Hubkovi",
-    "Miloš Hubka st",
+    "Miloš ml. a Michaela Hubkovi",
+    "Miloš Hubka st.",
     "Zdeněk Taraba",
     "Klára Tarabová",
     "Lucie Tarabová",
