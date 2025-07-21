@@ -6,11 +6,13 @@ const TravelAndAccommodation = () => {
   const info = [
     {
       title: "Doprava",
-      details: "Parkování je zajištěno přímo u místa konání oslavy. Pokud přijíždíte vlakem, nejbližší zastávka je v Police nad metují. Pro hosty z okolí bude zajištěn svoz.",
+      details:
+        "Parkování je zajištěno přímo u místa konání oslavy. Pokud přijíždíte vlakem, nejbližší zastávka je v Polici nad metují. Pro hosty z okolí bude zajištěn svoz.",
     },
     {
       title: "Ubytování",
-      details: "Pro hosty je možnost přespání v tělocvičně. Je však nutné si přinést vlastní spacáky a karimatky.",
+      details:
+        "Pro hosty je možnost přespání v tělocvičně. Je však nutné si přinést vlastní spacáky a karimatky.",
     },
   ];
 
