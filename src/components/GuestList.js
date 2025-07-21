@@ -21,6 +21,7 @@ const GuestList = () => {
     "Ivana Petrovická, a Jan Fišera",
     "Pavel a Tereza Mádrovi",
     "Eva Jirásková a Jan Amrich",
+    "Ludvík Kulich",
   ];
 
   const celebrationGuests = [
