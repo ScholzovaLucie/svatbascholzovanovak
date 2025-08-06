@@ -38,7 +38,7 @@ const GuestList = () => {
     "Jakub Novák",
     "Michal Krtička a Šárka Hubková",
     "Rudolf Blecha a Kateřina Máslová",
-    "Rostislav Mitiska",
+    "Rostislav Mitiska a Jitka Hédlová",
     "Adam Ševc",
     "Martina Jirásková a Martin Šedek",
     "Filip a Natálie Wietkovi",
