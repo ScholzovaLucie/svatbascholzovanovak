@@ -53,7 +53,7 @@ const GuestList = () => {
     "Josef Verner",
     "Vladimír Scholz",
     "Vojtěch Scholz a Anna Beranová",
-    "Matěj Rusnák",
+    "Matěj Rusnák a Jana Bohušová",
   ];
 
   return (
