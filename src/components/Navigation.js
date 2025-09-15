@@ -9,10 +9,11 @@ const Navigation = ({ scrollToSection }) => {
     { label: "Doprava a ubytování", section: "travel" },
     { label: "Dresscode", section: "dresscode" },
     { label: "Důležité osoby", section: "importantPeople" },
-    { label: "Galerie", section: "gallery" },
+    { label: "Galerie", section: "usgallery" },
     { label: "Tipy na dary", section: "gifts" },
     { label: "Seznam Hostů", section: "guestList" },
     { label: "Potvrzení účasti", section: "reservation" },
+    { label: "Svatební Galerie", section: "weddgallery" },
   ];
 
   return (

@@ -1,18 +1,20 @@
 import "./App.css";
 import React, { useRef, useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
-import Hero from "./components/Hero";
-import AboutUs from "./components/AboutUs";
-import Location from "./components/Location";
-import Schedule from "./components/Schedule";
-import Dresscode from "./components/Dresscode";
-import ImportantPeople from "./components/ImportantPeople";
-import Gallery from "./components/Gallery";
-import ReservationForm from "./components/ReservationForm";
-import Footer from "./components/Footer";
-import GuestList from "./components/GuestList";
-import TravelAndAccommodation from "./components/TravelAndAccommodation";
-import GiftList from "./components/GiftList";
+import Hero from "./pages/Hero";
+import AboutUs from "./pages/AboutUs";
+import Location from "./pages/Location";
+import Schedule from "./pages/Schedule";
+import Dresscode from "./pages/Dresscode";
+import ImportantPeople from "./pages/ImportantPeople";
+import UsGallery from "./pages/UsGallery";
+import WeddGalery from "./pages/WeddGalery";
+import ReservationForm from "./pages/ReservationForm";
+import Footer from "./pages/Footer";
+import GuestList from "./pages/GuestList";
+import TravelAndAccommodation from "./pages/TravelAndAccommodation";
+import GiftList from "./pages/GiftList";
+import { use } from "react";
 
 const App = () => {
   const heroRef = useRef(null);
@@ -21,7 +23,8 @@ const App = () => {
   const scheduleRef = useRef(null);
   const dresscodeRef = useRef(null);
   const importantPeopleRef = useRef(null);
-  const galleryRef = useRef(null);
+  const usGalleryRef = useRef(null);
+  const weddGalleryRef = useRef(null);
   const reservationRef = useRef(null);
   const guestList = useRef(null);
   const travelRef = useRef(null);
@@ -35,10 +38,11 @@ const App = () => {
     travel: travelRef,
     dresscode: dresscodeRef,
     importantPeople: importantPeopleRef,
-    gallery: galleryRef,
+    usgallery: usGalleryRef,
     reservation: reservationRef,
     guestList: guestList,
     gifts: giftsRef,
+    weddgallery: weddGalleryRef,
   };
 
   const slowScrollTo = (ref) => {
@@ -99,8 +103,8 @@ const App = () => {
         <div ref={importantPeopleRef}>
           <ImportantPeople />
         </div>
-        <div ref={galleryRef}>
-          <Gallery />
+        <div ref={usGalleryRef}>
+          <UsGallery />
         </div>
         <div ref={giftsRef}>
           <GiftList />
@@ -110,6 +114,9 @@ const App = () => {
         </div>
         <div ref={reservationRef}>
           <ReservationForm />
+        </div>
+        <div ref={weddGalleryRef}>
+          <WeddGalery />
         </div>
         <Footer />
       </div>
